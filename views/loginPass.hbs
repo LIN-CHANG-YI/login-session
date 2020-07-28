@@ -1,0 +1,8 @@
+{{#if firstName}}
+<h1>Welcome back {{firstName}}!</h1>
+<form action="/" method="POST">
+  <button class="btn btn-danger" type="submit">Logout</button>
+</form>
+{{else}}
+<h1>NOT FOUND 404</h1>
+{{/if}}
