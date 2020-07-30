@@ -9,7 +9,7 @@ router.use(session({
   rolling: false,
   saveUninitialized: true,
   store: new MongoStore({ url: 'mongodb://localhost:27017/sessiondb' }), //使用mongodb儲存
-  cookie: { httpOnly: true, maxAge: 5000 } //30秒清除session
+  cookie: { httpOnly: true, maxAge: 30000 } //30秒清除session
 }))
 
 
