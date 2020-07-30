@@ -1,8 +1,31 @@
-{{#if firstName}}
-<h1>Welcome back {{firstName}}!</h1>
-<form action="/" method="POST">
-  <button class="btn btn-danger" type="submit">Logout</button>
-</form>
-{{else}}
-<h1>NOT FOUND 404</h1>
-{{/if}}
+<div class="">
+  {{#if firstName}}
+  <h1 style="font-family: fantasy; margin:auto">Welcome back {{firstName}}!</h1>
+  <form action="/" method="POST">
+    <button class="btn btn-danger" type="button" data-toggle="modal" data-target="#logout">Logout</button>
+    <!-- Modal -->
+    <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">登出</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            確定要登出帳號?
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">確定</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  {{else}}
+  <h1 style="font-family: fantasy; margin:auto">User has logged out</h1>
+  {{/if}}
+</div>

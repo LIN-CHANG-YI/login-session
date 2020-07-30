@@ -1,15 +1,15 @@
 <div class="container">
-  <h1 class="text-center">Account Login</h1>
+  <h1 class="text-center" style="font-family: fantasy;">Account Login</h1>
   <div class="row justify-content-center">
-    <form action="/login" method="POST">
+    <form action="/login" method="POST" class="border p-2">
       <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp"
-          placeholder="email...">
+        <label for="exampleInputEmail1" style="font-family: OCR A Std, monospace">Email address</label>
+        <input type="email" class="form-control" value='{{email}}' name="email" id="exampleInputEmail1"
+          aria-describedby="emailHelp" placeholder="email...">
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" name="password" id="exampleInputPassword1"
+        <label for="exampleInputPassword1" style="font-family: OCR A Std, monospace">Password</label>
+        <input type="password" class="form-control" value='{{password}}' name="password" id="exampleInputPassword1"
           placeholder="password...">
       </div>
       <button type="submit" class="btn btn-primary">Login</button>
